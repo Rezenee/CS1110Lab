@@ -1,5 +1,13 @@
-'''Comment
-more detail
+'''
+Name: Zane Rickert
+Project Number: 2
+Lab Section: CS-1110-545
+
+This program asks the user for information about an employee
+it asks for the employees name, base salary, items sold, and their tier in the company
+it takes this information to calculate their total income to be payed as well
+as a warning if they are not making enough sales.
+The program will ask the user if they want to input any extra employees, and will loop until they are finished.
 '''
 def main():
     while True:
@@ -35,6 +43,7 @@ def getName():
 
     while True:
         name = input("Enter Employee's Name: ")
+        # If the name is empty, re ask
         if len(name) < 1:
             continue
         else:
@@ -50,6 +59,7 @@ def getMonthlyBaseSalary():
             salary = float(input("Enter Monthly Base: "))
             break
         except ValueError:
+            # Re-prompt the user if the input is empty
             continue
 
     return salary
@@ -63,7 +73,9 @@ def getTier():
             tier = input("Enter Tier (B, M, or P): ")
             tier = tier[0].upper()
         except IndexError:
+            # If the user inputs nothing re-prompt
             continue
+        # If the tier is not valid, tell the user and re-prompt
         if not tier in valid_tiers:
             print("Tier {} is not a legitimate tier value".format(tier))
             continue
@@ -76,7 +88,10 @@ def getItemsSold():
         try: 
             items_sold = int(input("Enter Items Sold: "))
         except ValueError:
+            # If empty value is inputted, re-prompt
             continue
+
+        # If they input negative value, re-prompt
         if items_sold < 0:
             print("Invalid number for Items Sold.")
             continue

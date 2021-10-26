@@ -1,4 +1,4 @@
-100000   43736.57 Rossum, Guido V.
-100789 5681745.99 Eich, Brendan
+100000       0.00 Rossum, Guido V.
+100789 5781745.99 Eich, Brendan
 650430    2398.12 Wall, Larry
 999999

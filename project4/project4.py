@@ -123,5 +123,6 @@ def get_command():
 
         return command.lower()
 
+# Run the main block of the program
 if __name__ == '__main__':
     main()

@@ -1,0 +1,8 @@
+Name: Zane Rickert
+Date: aeu
+university:la universidad
+museum:el museo
+office:la oficina, el despacho
+airport:el aeropuerto
+movie theater:el cine
+Score: 0 out of 5 correct

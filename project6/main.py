@@ -5,7 +5,6 @@ def main():
     quiz_dict = {}
 
     print("Welcome to the vocabulary quiz program.\n")
-
     filename = input("Please enter a file name: ")
 
     # call get_dic, return the dictionary into source_dictionary.
@@ -30,7 +29,6 @@ def main():
             continue
 
         break
-
     
     print('\n')
     # This picks keys from a random sample of the source dictionary keys
@@ -49,11 +47,10 @@ def main():
         if quiz_dict[key][1]:
             correct += 1
 
-
     print(f'{correct} out of {word_count} correct.')
     output_file = input("Enter an output file (or press enter to quit): ")
-
     print('\nBye!')
+
     if output_file != '':
         make_quiz_file(name, date, quiz_dict)
 
@@ -91,9 +88,9 @@ def get_dic(filename):
                 # Some english words have multiple spanish words, so you must 
                 # split them again based on comma. 
                 values = value.split(',')
-                
                 # Removes whitespace from every word in the dict.
                 source_dictionary[key] = [word.strip() for word in values]
+
     except FileNotFoundError:
         print(f"The file name {filename} does not exist")
         print("\nBye!")
